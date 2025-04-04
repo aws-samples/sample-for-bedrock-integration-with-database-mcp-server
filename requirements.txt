@@ -1,0 +1,5 @@
+asyncio==3.4.3
+boto3==1.35.87
+mcp==1.1.2
+uvicorn==0.34.0
+fastapi==0.115.6
