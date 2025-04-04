@@ -19,17 +19,17 @@ class DatabaseConfig:
         return self._get_sqlite_config()
 
     def _get_postgres_config(self):
-        db_config = _read_config()
+        db_config = self._read_config()
         return {
             "type": "postgres",
             "connection_string": (
-                f"postgresql://{db_config['user']}:{db_config['password']}"
-                f"@{db_config['host']}:{db_config['port']}/{db_config['dbname']}"
+                f"postgresql://{db_config['db_user']}:{db_config['db_password']}"
+                f"@{db_config['db_host']}:{db_config['db_port']}/{db_config['db_name']}"
                 f"?sslmode=verify-full&sslrootcert={db_config['ssl_cert_path']}"
             ),
         }
 
-    def _read_config(self, filename="dbconfig.ini", section="rdspostgresql"):
+    def _read_config(self, filename="config/dbconfig.ini", section="rdspostgresql"):
         parser = ConfigParser()
         parser.read(filename)
 
