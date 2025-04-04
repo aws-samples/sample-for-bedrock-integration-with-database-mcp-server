@@ -1,0 +1,7 @@
+# add all pycache folder
+__pycache__/
+src/factory/__pycache__/
+src/config/__pycache__/
+src/config/global-bundle.pem
+src/data/mymcpdb.db
+.DS_Store

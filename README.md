@@ -100,6 +100,8 @@ Change **[dbconfig.ini](src/config/dbconfig.ini)** file with the following infor
 Run with appropriate database type option. If no database type provided, chat session will assume SQLite as the default database and will create a database within src/data folder with the name mymcpdb.db. You can point to your existing SQLite database by modifying [this file](src/config/database_config.py)
 
 ```
+cd src
+
 python3 chat.py --db-type [sqlite / postgres]
 
 ```
